@@ -62,17 +62,11 @@
 
       $player = $event->getEntity();
 
-      $death_cause = $event->getEntity()->getLastDamageCuase();
+      $killer = $event->getDamager();
 
-      if($death_cause instanceof EntityDamageByEntityEvent) {
+      if($killer instanceof Player) {
 
-        $killer = $event->getDamager();
-
-        if($killer instanceof Player) {
-
-          $player->sendMessage($this->cfg->get("death_message"));
-
-        }
+        $player->sendMessage($this->cfg->get("death_message"));
 
       }
 
