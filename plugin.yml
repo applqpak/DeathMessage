@@ -1,0 +1,15 @@
+name: DeathMessage
+version: 1.0.0
+author: applqpak
+api:
+- 1.0.0
+- 2.0.0
+main: DeathMessage\Main
+commands:
+  deathmessage:
+    description: Set Custom Death Message.
+    usage: "/deathmessage < message >"
+    permission: deathmessage.command
+permissions:
+  deathmessage.command:
+    default: op
